@@ -132,6 +132,7 @@ a:active,a:focus,a:hover{color:#128f76}
 .text-primary{color:#18bc9c!important}
 .text-secondary{color:#2c3e50!important}
 .btn-primary{background-color:#18bc9c/*botão fechar*/;border-color:#18bc9c}
+.btn-wpp{background-color:#ffffff/*botão whatsapp*/;border-color:#ffffff}
 .btn-primary:active,.btn-primary:focus,
 .btn-primary:hover{background-color:#128f76;border-color:#128f76}
 

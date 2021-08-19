@@ -369,6 +369,16 @@ a:focus, a:hover, a:active {
   border-color: #128f76;
 }
 
+.btn-wpp {
+  background-color: #18BC9C;
+  border-color: #18BC9C;
+}
+
+.btn-wpp:hover, .btn-wpp:focus, .btn-wpp:active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
 .btn-secondary {
   background-color: #2C3E50;
   border-color: #2C3E50;
