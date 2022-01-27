@@ -1,113 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>Controle Engenharia</title>
+    <title>Controle Engenharia</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom fonts for this template -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-        <!-- Plugin CSS -->
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 
-        <!-- Custom styles for this template -->
-        <link href="css/freelancer.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link href="css/freelancer.css" rel="stylesheet">
 
-        <link rel="shortcut icon" href="img/profile.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/profile.png" type="image/x-icon" />
 
-        <!-- Link to whatsapp icon in html -->
+    <!-- Link to whatsapp icon in html -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
 
-    </head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/toastmaker/dist/toastmaker.min.css">
 
-    <body id="page-top">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="index.html">Controle Engenharia</a>
             <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
+                Menu
+                <i class="fa fa-bars"></i>
             </button>
         </div>
-        </nav>
+    </nav>
 
-        <!-- Header -->
-        <!-- <header class="masthead bg-primary text-white text-center"> -->
-        <header class="masthead text-white text-center">
+    <!-- Header -->
+    <!-- <header class="masthead bg-primary text-white text-center"> -->
+    <header class="masthead text-white text-center">
         <div class="container">
             <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt="">
             <h1 class="text-uppercase mb-0" style="color: rgb(193, 31, 31)">Controle Engenharia</h1>
             <hr class="star-dark">
-            <h2 class="font-weight-light mb-0" style="color: rgb(193, 31, 31)">Laboratório de Concreto</h2>
+            <!-- <h2 class="font-weight-light mb-0" style="color: rgb(193, 31, 31)">Laboratório de Concreto</h2> -->
         </div>
-        </header>
+
+        <div class="container">
+
+            <form action="#" method="post" class="form">
+                <table id="tableblocos">
+                    <thead>
+                        <tr>
+                            <th class="tg-0lax">BLOCO #</th>
+                            <th class="tg-0lax">VALOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="buttontable">
+                    <tr>
+                        <td class="tdbutton"><input type="button" value="Adicionar bloco" onclick="addRows()" class="btn btn-success" /></td>
+                        <td class="tdbutton"><input type="button" value="Remover bloco" onclick="deleteRows()" class="btn btn-danger" /></td>
+                        <td class="tdbutton">
+
+                            <a class="portfolio-item d-block mx-auto" href="#results">
+                                <input type="button" value="Ok" onclick="submitValues()" class="btn btn-secondary" id="submitbtn" />
+
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </header>
 
 
-
-        <!-- Services Section -->
-        <section class="bg-primary text-white mb-0" id="services">
-            <div class="container">
-                <h2 class="text-center text-uppercase text-white">Serviços oferecidos</h2>
-                <hr class="star-light mb-5">
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="results">
+        <div class="portfolio-modal-dialog bg-white">
+            <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+                <i class="fa fa-3x fa-times"></i>
+            </a>
+            <div class="container text-center">
                 <div class="row">
-                <div class="col-lg-4 ml-auto">
-                    <p class="lead">Empresa que fornece serviços de controle tecnológico sobre concreto</p>
-                    
-                    <p class="lead">Conta com uma equipe de profissionais na área de controle tecnológico
-                        e concreto em geral</p>
-                    
-                    <p class="lead">Está no mercado de trabalho há mais de 10 anos</p>
-                </div>
-                <div class="col-lg-4 mr-auto">
-                    <p class="lead">- Ensaio de compressão de corpo de prova<br>
-                            - Estudo de dosagem de concreto<br>
-                            - Esclerometria<br>
-                            - Estudo de materiais de concreto<br>
-                            - Ensaio de compressão de bloco estrutural<br>
-                            - Extração de testemunho de concreto<br>
-                            - Ensaio de arrancamento<br>
-                            - Ensaio de impacto de corpo mole e duro<br>
-                            - Ensaio de caracterização dos componentes de concreto<br>
-                            - Ensaios de caracterização de solos e ensaios de campos de solos<br>
-                            - Aluguel de moldes de corpo de prova</p>
-                </div>
+                    <p id="bloco1"></p>
                 </div>
             </div>
-            </section>
+        </div>
+    </div>
 
-        
-        
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me2.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for this template -->
-        <script src="js/freelancer.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    </body>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me2.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/table.js"></script>
+
+
+    <!-- Toast JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/toastmaker/dist/toastmaker.min.js"></script>
+
+
+</body>
 
 </html>
