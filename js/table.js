@@ -40,13 +40,13 @@ function submitValues() {
     var elems = document.getElementsByTagName('input');
 
 
-    if (elems.length <= 3) {
+    if (elems.length < 1) {
         alert("Inválido!");
         return;
     }
 
 
-    for (var i = 0; i <= elems.length - 4; i++) {
+    for (var i = 0; i < elems.length; i++) {
 
         if (elems[i].value == '') {
             $('#submitbtn').click(() => { ToastMaker(`Bloco #${i+1} está vazio`) });
@@ -58,19 +58,21 @@ function submitValues() {
     console.log(values);
 
 
-    var media_text = document.getElementById("media").innerHTML;
-    var somatorio_text = document.getElementById("somatorio").innerHTML;
-    var desviopadrao_text = document.getElementById("desviopadrao").innerHTML;
-    var variacao_text = document.getElementById("variacao").innerHTML;
-    var fck_text = document.getElementById("fck").innerHTML;
+    // var media_text = document.getElementById("media").innerHTML;
+    // var somatorio_text = document.getElementById("somatorio").innerHTML;
+    // var desviopadrao_text = document.getElementById("desviopadrao").innerHTML;
+    // var variacao_text = document.getElementById("variacao").innerHTML;
+    // var fck_text = document.getElementById("fck").innerHTML;
 
 
 
-    document.getElementById("media").innerHTML = media_text + media();
-    document.getElementById("somatorio").innerHTML = somatorio_text + media();
-    document.getElementById("desviopadrao").innerHTML = desviopadrao_text + media();
-    document.getElementById("variacao").innerHTML = variacao_text + media();
-    document.getElementById("fck").innerHTML = fck_text + media();
+    document.getElementById("media").innerHTML = media().toString();
+    // document.getElementById("somatorio").innerHTML = somatorio_text + media();
+    // document.getElementById("desviopadrao").innerHTML = desviopadrao_text + media();
+    // document.getElementById("variacao").innerHTML = variacao_text + media();
+    // document.getElementById("fck").innerHTML = fck_text + media();
+
+    values = [];
 }
 
 function deleteRows() {
